@@ -20,9 +20,9 @@ select = [
     "B",   # flake8-bugbear
     "I",   # isort import sorting
     "W",   # pycodestyle warnings
-    "ANN",  # flake8-annotations: enforce type annotations
-    "SIM",  # flake8-simplify: suggest simpler code patterns
-    "W",    # pycodestyle warnings (duplicate of line 5, but harmless)
+    "ANN", # flake8-annotations: enforce type annotations
+    "SIM", # flake8-simplify: suggest simpler code patterns
+    "W",   # pycodestyle warnings (duplicate of line 5, but harmless)
 
 ]
 
@@ -47,6 +47,14 @@ ignore = [
     "ANN401", # Dynamically typed Any is disallowed - too strict for kwargs and generic containers
 ]
 unfixable = ["F401", "F841"] # unused-import, unused-variable
+
+
+[tool.ruff.lint.isort]
+order-by-type = true
+force-single-line = false
+lines-after-imports = 2
+combine-as-imports = true
+
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
