@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(uv init:*)",
-      "Bash(uv add:*)"
-    ]
-  }
-}
